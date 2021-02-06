@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bv5-qs-0qg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dice Rolling-->
+        <scene sceneID="q9G-5D-yjo">
+            <objects>
+                <viewController storyboardIdentifier="DiceRollingViewController" id="uJm-H3-Xp8" customClass="DiceRollingViewController" customModule="BasicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rhO-n8-PFo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="WmU-UC-7Ja">
+                                <rect key="frame" x="145.5" y="100" width="123" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Ton-ep-8pm"/>
+                                    <constraint firstAttribute="width" constant="123" id="th1-19-fQB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Li-S9-quF">
+                                <rect key="frame" x="132" y="270" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Jdl-6e-cva"/>
+                                    <constraint firstAttribute="height" constant="50" id="WWp-IP-lIO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Roll the Dice">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRollTapped:" destination="uJm-H3-Xp8" eventType="touchUpInside" id="Has-2f-MkI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiN-pg-Lzo">
+                                <rect key="frame" x="0.0" y="340" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Recently rolled dice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRO-Nf-Qpq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VRO-Nf-Qpq" secondAttribute="trailing" id="13a-iz-LXa"/>
+                                    <constraint firstAttribute="height" constant="50" id="9gK-mG-stC"/>
+                                    <constraint firstAttribute="bottom" secondItem="VRO-Nf-Qpq" secondAttribute="bottom" id="Nd3-bF-AwC"/>
+                                    <constraint firstItem="VRO-Nf-Qpq" firstAttribute="top" secondItem="ZiN-pg-Lzo" secondAttribute="top" id="XYd-LT-pvI"/>
+                                    <constraint firstItem="VRO-Nf-Qpq" firstAttribute="leading" secondItem="ZiN-pg-Lzo" secondAttribute="leading" id="eca-Tv-utj"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-EP-5Or">
+                                <rect key="frame" x="15" y="390" width="384" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zf9-Fi-GFP">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Lyg-JY-D3Q"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vXf-8t-OoA">
+                                        <rect key="frame" x="79" y="0.0" width="68.5" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Yj2-mu-YEU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uw7-vv-JHS">
+                                        <rect key="frame" x="157.5" y="0.0" width="69" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="abI-dN-COY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MMv-5x-1dC">
+                                        <rect key="frame" x="236.5" y="0.0" width="68.5" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="OCw-bQ-mHp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vQJ-cz-BBY">
+                                        <rect key="frame" x="315" y="0.0" width="69" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="aHf-kh-rn2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Cpq-w2-OsF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WmU-UC-7Ja" firstAttribute="centerX" secondItem="7s9-te-ddq" secondAttribute="centerX" id="2AK-34-dQn"/>
+                            <constraint firstItem="ZiN-pg-Lzo" firstAttribute="leading" secondItem="7s9-te-ddq" secondAttribute="leading" id="5mq-c7-Alg"/>
+                            <constraint firstItem="6Li-S9-quF" firstAttribute="centerX" secondItem="WmU-UC-7Ja" secondAttribute="centerX" id="AMK-io-9wr"/>
+                            <constraint firstItem="7s9-te-ddq" firstAttribute="trailing" secondItem="ZiN-pg-Lzo" secondAttribute="trailing" id="IpI-VR-ISY"/>
+                            <constraint firstItem="E4V-EP-5Or" firstAttribute="leading" secondItem="7s9-te-ddq" secondAttribute="leading" constant="15" id="Ttc-o2-Hty"/>
+                            <constraint firstItem="6Li-S9-quF" firstAttribute="top" secondItem="WmU-UC-7Ja" secondAttribute="bottom" constant="50" id="VWH-7d-sNO"/>
+                            <constraint firstItem="7s9-te-ddq" firstAttribute="trailing" secondItem="E4V-EP-5Or" secondAttribute="trailing" constant="15" id="YW8-S9-u4a"/>
+                            <constraint firstItem="WmU-UC-7Ja" firstAttribute="top" secondItem="rhO-n8-PFo" secondAttribute="top" constant="100" id="aUF-pA-Xnf"/>
+                            <constraint firstItem="ZiN-pg-Lzo" firstAttribute="top" secondItem="6Li-S9-quF" secondAttribute="bottom" constant="20" id="lRx-OO-OEz"/>
+                            <constraint firstItem="E4V-EP-5Or" firstAttribute="top" secondItem="ZiN-pg-Lzo" secondAttribute="bottom" id="yVD-iQ-Jv9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7s9-te-ddq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dice Rolling" image="gamecontroller" catalog="system" id="rlS-bA-3C5"/>
+                    <connections>
+                        <outlet property="dice1" destination="Zf9-Fi-GFP" id="xK3-CZ-Uwq"/>
+                        <outlet property="dice2" destination="vXf-8t-OoA" id="8Ud-Yv-VWL"/>
+                        <outlet property="dice3" destination="Uw7-vv-JHS" id="Mx4-7m-0Hi"/>
+                        <outlet property="dice4" destination="MMv-5x-1dC" id="6qd-3i-otg"/>
+                        <outlet property="dice5" destination="vQJ-cz-BBY" id="FUk-HD-HNy"/>
+                        <outlet property="imgDice" destination="WmU-UC-7Ja" id="d58-co-zH1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imp-lL-gRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576.81159420289862" y="241.74107142857142"/>
+        </scene>
+        <!--Choose Side-->
+        <scene sceneID="5XF-sB-s4t">
+            <objects>
+                <viewController storyboardIdentifier="ChooseSideViewController" id="BNG-nC-6ic" customClass="ChooseSideViewController" customModule="BasicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdF-Ob-Li2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xd8-KI-Kp7">
+                                <rect key="frame" x="103.5" y="137" width="207" height="627"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKq-pl-92I">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="195.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw1-wg-85D">
+                                        <rect key="frame" x="0.0" y="215.5" width="207" height="196"/>
+                                        <state key="normal" image="Imperial_Emblem.png"/>
+                                        <connections>
+                                            <action selector="btnEmpireTapped:" destination="BNG-nC-6ic" eventType="touchUpInside" id="4hY-VE-K5i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pi-aU-1c2">
+                                        <rect key="frame" x="0.0" y="431.5" width="207" height="195.5"/>
+                                        <state key="normal" image="Rebel_Alliance_logo.svg.png"/>
+                                        <connections>
+                                            <action selector="btnRebelTapped:" destination="BNG-nC-6ic" eventType="touchUpInside" id="f0D-86-1En"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kw1-wg-85D" firstAttribute="top" secondItem="DKq-pl-92I" secondAttribute="bottom" id="9HV-0d-o5D"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xd8-KI-Kp7" firstAttribute="width" secondItem="fdF-Ob-Li2" secondAttribute="width" multiplier="0.5" id="3bF-6b-04f"/>
+                            <constraint firstItem="Xd8-KI-Kp7" firstAttribute="height" secondItem="fdF-Ob-Li2" secondAttribute="height" multiplier="0.7" id="USw-DO-cEV"/>
+                            <constraint firstItem="Xd8-KI-Kp7" firstAttribute="centerX" secondItem="pJx-ir-eBF" secondAttribute="centerX" id="vv3-6T-tbX"/>
+                            <constraint firstItem="Xd8-KI-Kp7" firstAttribute="centerY" secondItem="pJx-ir-eBF" secondAttribute="centerY" id="w3V-Nd-sbn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pJx-ir-eBF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Side" id="eqz-hm-edb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Sd-P9-3dD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.072463768115945" y="241.74107142857142"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="oM9-ja-EqI">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="2fW-Hh-Rkr" customClass="DetailViewController" customModule="BasicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAd-6z-85r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCk-wu-lSu">
+                                <rect key="frame" x="41.5" y="432.5" width="331" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DCk-wu-lSu" firstAttribute="centerY" secondItem="XKW-ji-Tv5" secondAttribute="centerY" id="d0e-bO-Qgp"/>
+                            <constraint firstItem="DCk-wu-lSu" firstAttribute="centerX" secondItem="XKW-ji-Tv5" secondAttribute="centerX" id="gtq-jK-ulG"/>
+                            <constraint firstItem="DCk-wu-lSu" firstAttribute="width" secondItem="sAd-6z-85r" secondAttribute="width" multiplier="0.8" id="nEn-4M-vEI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XKW-ji-Tv5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cG-ab-hvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="890"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VSB-nS-rat">
+            <objects>
+                <tabBarController id="Bv5-qs-0qg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="htk-nD-Kzp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rxj-Xs-XHl" kind="relationship" relationship="viewControllers" id="skh-Ve-6KE"/>
+                        <segue destination="uJm-H3-Xp8" kind="relationship" relationship="viewControllers" id="Wzk-aw-Eki"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUa-bJ-xWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-664" y="-450"/>
+        </scene>
+        <!--Choose Side-->
+        <scene sceneID="mar-b0-y47">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rxj-Xs-XHl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Choose Side" image="Imperial" id="GQ7-sw-NiT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mT3-73-uhI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BNG-nC-6ic" kind="relationship" relationship="rootViewController" id="OGX-yv-y3y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORv-jM-Iku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-965.21739130434787" y="241.74107142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Imperial" width="21" height="21"/>
+        <image name="Imperial_Emblem.png" width="500" height="500"/>
+        <image name="Rebel_Alliance_logo.svg.png" width="1200" height="1200"/>
+        <image name="dice-1.png" width="209" height="209"/>
+        <image name="gamecontroller" catalog="system" width="128" height="82"/>
+    </resources>
+</document>
